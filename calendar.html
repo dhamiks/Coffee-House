@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserve Your Notebook</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #181818;
+            color: #fff;
+            text-align: center;
+            padding: 50px;
+        }
+
+        h1 {
+            color: #ffc107;
+        }
+
+        .reservation-container {
+            background-color: #1f1f1f;
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+            text-align: left;
+        }
+
+        .reservation-container label {
+            display: block;
+            margin-bottom: 10px;
+            color: #ccc;
+        }
+
+        .reservation-container input,
+        .reservation-container select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #333;
+            color: #fff;
+        }
+
+        .reservation-container button {
+            background-color: #ffc107;
+            color: #000;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .reservation-container button:hover {
+            background-color: #e0a800;
+        }
+
+        .logo-container {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.logo {
+    width: 50px; /* Adjust the size as needed */
+    height: auto;
+    vertical-align: middle;
+}
+
+    </style>
+</head>
+<body>
+    <h1>Reserve Your Notebook</h1>
+    <div class="reservation-container">
+        <label for="date">Select Date:</label>
+        <input type="date" id="date" name="date">
+
+        <label for="time-slot">Select Time Slot:</label>
+        <select id="time-slot" name="time-slot">
+            <option value="07:00 - 08:00">07:00 - 08:00</option>
+            <option value="07:30 - 08:30">07:30 - 08:30</option>
+            <option value="08:00 - 09:00">08:00 - 09:00</option>
+            <option value="08:30 - 09:30">08:30 - 09:30</option>
+            <option value="09:00 - 10:00">09:00 - 10:00</option>
+            <option value="09:30 - 10:30">09:30 - 10:30</option>
+            <option value="10:00 - 11:00">10:00 - 11:00</option>
+            <option value="11:30 - 12:30">11:30 - 12:30</option>
+            <option value="12:00 - 13:00">12:00 - 13:00</option>
+            <option value="12:30 - 13:30">12:30 - 13:30</option>
+            <option value="13:00 - 14:00">13:00 - 14:00</option>
+            <option value="13:30 - 14:30">13:30 - 14:30</option>
+            <option value="14:00 - 15:00">14:00 - 15:00</option>
+            <option value="15:30 - 16:30">15:30 - 16:30</option>
+            <option value="16:00 - 17:00">16:00 - 17:00</option>
+            <option value="16:30 - 17:30">16:30 - 17:30</option>
+            <option value="17:00 - 18:00">17:00 - 18:00</option>
+            <option value="18:00 - 19:00">18:00 - 19:00</option>
+            <option value="18:30 - 19:30">18:30 - 19:30</option>
+            <option value="19:00 - 20:00">19:00 - 20:00</option>
+            <option value="20:30 - 21:30">20:30 - 21:30</option>
+            <option value="21:00 - 22:00">21:00 - 22:00</option>
+            <option value="21:30 - 22:30">21:30 - 22:30</option>
+            <option value="22:00 - 23:00">22:00 - 23:00</option>
+        </select>
+
+        <button onclick="confirmReservation()">Reserve</button>
+    </div>
+
+    <script>
+        const usedTimeSlots = new Set();
+
+        function confirmReservation() {
+            const date = document.getElementById('date').value;
+            const timeSlot = document.getElementById('time-slot').value;
+
+            if (date && timeSlot) {
+                if (usedTimeSlots.has(timeSlot)) {
+                    alert(`The time slot ${timeSlot} is already reserved. Please choose another.`);
+                } else {
+                    usedTimeSlots.add(timeSlot);
+                    alert(`Reservation confirmed for ${date} at ${timeSlot}.`);
+                    // Optionally, disable the reserved time slot
+                    const timeSlotElement = document.querySelector(`#time-slot option[value="${timeSlot}"]`);
+                    if (timeSlotElement) {
+                        timeSlotElement.disabled = true;
+                    }
+                }
+            } else {
+                alert('Please select a date and time slot.');
+            }
+        }
+    </script>
+</body>
+</html>

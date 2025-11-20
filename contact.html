@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Coffee House</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #181818;
+            color: #fff;
+        }
+
+        header {
+            background-color: #000;
+            padding: 20px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .site-title {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #ffc107;
+            margin-left: 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
+            gap: 20px;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: 600;
+            padding: 10px 15px;
+            border: 1px solid transparent;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            border: 1px solid #fff;
+            border-radius: 5px;
+        }
+
+        .contact-section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .contact-section h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #ffc107;
+        }
+
+        .contact-info {
+            margin: 20px 0;
+            line-height: 1.8;
+            color: #ccc;
+        }
+
+        .social-media {
+            margin: 40px 0;
+        }
+
+        .social-media a {
+            text-decoration: none;
+            margin: 0 10px;
+            color: #fff;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+
+        .social-media a:hover {
+            color: #ffc107;
+        }
+
+        .gallery {
+            margin-top: 50px;
+        }
+
+        .gallery h2 {
+            font-size: 2rem;
+            color: #ffc107;
+            margin-bottom: 20px;
+        }
+
+        .gallery-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .gallery-grid img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .gallery-grid img:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #000;
+            color: #fff;
+        }
+
+        .logo-container {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.logo {
+    width: 50px; /* Adjust the size as needed */
+    height: auto;
+    vertical-align: middle;
+}
+
+   
+
+.site-title {
+    height: 1px;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-left: 50px;
+    display: inline-block;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <span class="site-title">Coffee House</span>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="notebook-rent.html">Notebook Rent</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="contact-section">
+            <h1>Contact Us</h1>
+            <div class="contact-info">
+                <p><strong>Address:</strong> 123 Coffee Street, Latte City, Espresso State</p>
+                <p><strong>Phone:</strong> +123 456 7890</p>
+                <p><strong>Email:</strong> info@coffeehouse.com</p>
+                <p><strong>Business Hours:</strong> Mon-Sun: 07:00 - 23:00</p>
+            </div>
+
+            <div class="social-media">
+                <h2>Follow Us</h2>
+                <a href="https://www.facebook.com" target="_blank">Facebook</a>
+                <a href="https://www.instagram.com" target="_blank">Instagram</a>
+                <a href="https://www.twitter.com" target="_blank">Twitter</a>
+            </div>
+
+            <div class="gallery">
+                <h2>Our Gallery</h2>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="images/18.jpg" alt="Cafe Interior">
+                        <p>Cafe Interior</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/3.jpg" alt="Delicious Coffee">
+                        <p>Delicious Coffee</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/12.jpg" alt="Notebook Workspaces">
+                        <p>Notebook Workspaces</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/20.jpg" alt="Happy Customers">
+                        <p>Happy Customers</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/21.jpg" alt="Special Latte Art">
+                        <p>Special Latte Art</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/22.jpg" alt="Relaxing Corner">
+                        <p>Relaxing Corner</p>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Coffee House. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
